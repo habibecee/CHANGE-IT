@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url(./bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.check-div {
+	background-color: rgba(0, 0, 0, 0.651);
+	border-radius: 20px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.853);
+}
+
+.buttons {
+	width: 400px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+button {
+	transition: 0.5s ease-out !important;
+}
+
+button:hover {
+	box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.535) !important;
+}
