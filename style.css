@@ -1,44 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
+	font-family: "Indie Flower", cursive;
 }
 body {
 	width: 100%;
 	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background: url(./bg.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-.check-div {
-	background-color: rgba(0, 0, 0, 0.651);
-	border-radius: 20px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-	box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.853);
-}
-
-.buttons {
-	width: 400px;
-	height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
+	overflow: hidden;
 }
 
 button {
-	transition: 0.5s ease-out !important;
+	transition: 0.5s ease-in-out !important;
 }
 
 button:hover {
-	box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.535) !important;
+	box-shadow: 0 0 5px 5px rgba(114, 113, 113, 0.707) !important;
+}
+
+.blog-card {
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 70vh;
+	border-radius: 50px;
+	cursor: pointer;
+	flex: 0.5;
+	margin: 10px;
+	position: relative;
+	transition: flex 0.7s ease-in;
+}
+
+.blog-card h3 {
+	font-size: 36px;
+	position: absolute;
+	top: 10%;
+	left: 40%;
+	opacity: 0;
+	font-weight: bold;
+}
+
+.blog-card.active {
+	flex: 5;
+	border-radius: 50%;
+}
+
+.blog-card.active h3 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+	text-shadow: 5px -5px 10px #000, -5px 5px 10px #000;
+	color: white;
 }

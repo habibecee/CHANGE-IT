@@ -1,3 +1,5 @@
+// BACKGROUND
+
 const body = document.querySelector("body");
 const button1 = document.querySelector(".sonbahar");
 const button2 = document.querySelector(".kis");
@@ -74,4 +76,21 @@ function changeToSummer() {
 	const secilenBodyRenk = bodySummer[bodySıra];
 	bodySıra++;
 	body.style.backgroundImage = secilenBodyRenk;
+}
+
+// CARDS
+
+const cards = document.querySelectorAll(".blog-card");
+
+cards.forEach((card) => {
+	card.addEventListener("click", () => {
+		removeActive();
+		card.classList.add("active");
+	});
+});
+
+function removeActive() {
+	cards.forEach((card) => {
+		card.classList.remove("active");
+	});
 }
